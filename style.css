@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-time: "Anton", cursive;
+  --ff-main: "Noto Sans", sans-serif;
+
+  --dark-red: #20060f;
+  --time-red: #eb004a;
+}
+
+body {
+  font-family: var(--ff-main);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-red);
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1fr;
+}
+
+.container {
+  text-align: center;
+  background-color: wheat;
+  padding: 2rem;
+  max-width: 25rem;
+  border-radius: 1rem;
+  color: black;
+}
+
+#time {
+  font-family: var(--ff-time);
+  font-size: 3rem;
+  display: block;
+  margin: 1.5rem auto;
+  color: var(--time-red);
+  letter-spacing: 3px;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--dark-red);
+  color: white;
+  font-weight: 700;
+  font-family: var(--ff-main);
+  font-size: 1.0725rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: block;
+  outline-offset: 1px;
+  transition: 200ms ease-in-out;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:active {
+  scale: 0.95;
+}
+
+button:focus {
+  outline: 3px solid var(--time-red);
+}
+
+@media (width > 50rem) {
+  .cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .container {
+    max-width: 35rem;
+  }
+
+  #time {
+    font-size: 3.75rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1.25rem;
+  }
+}
