@@ -21,9 +21,23 @@
             <h2 id="time">00:00</h2>
           </div>
           <div class="buttons-wrapper">
-            <button onclick="startClock()">Start</button
-            ><button onclick="resetClock()">Reset</button
-            ><button onclick="stopClock()">Stop</button>
+            <button
+              aria-hidden="false"
+              aria-label="Start"
+              onclick="startClock()"
+            >
+              Start
+            </button>
+            <button
+              aria-hidden="false"
+              aria-label="Reset"
+              onclick="resetClock()"
+            >
+              Reset
+            </button>
+            <button aria-hidden="false" aria-label="Stop" onclick="stopClock()">
+              Stop
+            </button>
           </div>
         </div>
       </div>
